@@ -25,25 +25,5 @@ export default {
 
 <style scoped>
 
-.grid {
-  display: grid;
-  height: 50%;
-  grid-template-columns: 10% 20% 20% 20% 20% 10% ;
-  grid-template-rows: 20% 20% 20% 20% 20%;
-}
-
-.todo-header {
-  grid-column-start: 2;
-  grid-column-end: 4;
-  grid-row-start: 1 ;
-  grid-row-end: 1
-}
-
-.list-of-todos {
-  grid-column-start: 2;
-  grid-column-end: 6;
-  grid-row-start: 2;
-  grid-row-end: 5;
-}
 
 </style>

@@ -31,7 +31,8 @@ export default {
 
 .todo-item{
   text-align: left;
-  padding: 10px;
+  background-color: #685C5C;
+
 }
 
 .del {

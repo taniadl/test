@@ -1,10 +1,15 @@
 <template>
-  <div>
-    <h3>Add a todo</h3>
-    <form @submit="addTodo">
-      <input type="text" v-model='title' name='title' placeholder='Add Todo...'>
-      <input type="submit" value="submit" class='btn btn-success' >
-    </form>
+  <div class="container">
+    <div class="grid">
+      <h3 class="add-todo-title">Add a todo</h3>
+      <div class="form-box">
+      <form @submit="addTodo">
+        <input type="text" v-model='title' name='title' placeholder='Add Todo...'>
+        <input type="submit" value="submit" class='btn btn-success' >
+      </form>
+            </div>
+
+    </div>
   </div>
 </template>
 
@@ -31,6 +36,24 @@
   }
 </script>
 
-<style>
+<style scoped>
 
+.grid {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20% ;
+  padding: 40px;
+  background-color: gray;
+}
+
+.add-todo-title {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  color: white;
+}
+
+.form-box {
+  grid-column-start: 3;
+  grid-column-end: 5;
+
+}
 </style>

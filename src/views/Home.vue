@@ -1,8 +1,9 @@
 <template>
   <div id="app">
-    <AddTodo v-on:add-todo='addTodo'/>
-    <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo"/>
-    <img alt="Tania's pic" src="../assets/taniaimagen.jpeg">
+    <div class="grid">
+      <AddTodo class="add-todo " v-on:add-todo='addTodo'/>
+      <Todos class="todos" v-bind:todos="todos" v-on:del-todo="deleteTodo"/>
+    </div>
   </div>
 </template>
 
@@ -52,15 +53,29 @@ export default {
 }
 </script scoped>
 
-  <style>
+<style>
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
   }
+.grid {
+  display: grid;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+}
 
+.add-todo {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  padding: 40px;
+}
+
+.todos {
+  grid-row-start: 4;
+  grid-row-end: 5;
+
+}
 
 </style>
